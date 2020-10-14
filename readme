@@ -1,0 +1,4 @@
+The COVID trajectories file is an r-script that will download the NYT COVID dataset from thieir GitHub page and state populations from Wikipedia. Adding some varibables to the 
+NYT data set and cleaning some values up we use the cross correlation compare states infection numbers.  Using these correlation values as pairwise distances we make each state
+into a vector of correlations and cluster them.  Plotting the clusters we can see there are some obvious similarities within clusters.  There is some degree of variation 
+within each cluster since the correlation is used as the distance metric and not the value of infections per 10,000.
