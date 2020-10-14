@@ -53,7 +53,6 @@ names(states_pop)[2]<-"population"
 states_pop$population<-states_pop$population %>% parse_number()
 
 ##Probably not the best way but it works.  Adds cases and deaths normed to per 10,000 in population.
-Statesinone %>% mutate(pop=0)
 for(i in 1:nrow(Statesinone)){Statesinone$pop[i]<-filter(states_pop,states_pop$State==Statesinone$state[i])[1,2]}
 
 Statesinone<-Statesinone %>% mutate(cases_normed=cases/pop*10000)
